@@ -1,5 +1,3 @@
-Sure, here's a basic README template you can use for your project:
-
 # King Jack Consults Website
 
 This is the official website for King Jack Consults, a leading provider of innovative property and land surveying, development, management, consulting solutions, and services within the Estate management industry.
