@@ -10,6 +10,7 @@
   /* Apply styles to the body element */
   body {
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -409,6 +410,19 @@
   color: #f8f8f8;
 }
 
+.swiper-container {
+  overflow: hidden; /* Hide horizontal overflow */
+  position: relative; /* Add relative positioning */
+}
+
+.swiper-wrapper {
+  display: flex; /* Use flex display for the slides */
+}
+
+.swiper-slide {
+  width: 100%; /* Ensure each slide takes the full width of the container */
+  flex-shrink: 0; /* Prevent flex from shrinking the slides */
+}
 
 
 
@@ -481,7 +495,11 @@
 
 
   /* Additional styling for smaller screens */
-  @media (max-width: 768px) {
+  @media (max-width: 486px) {
+    body {
+      margin: 0;
+      padding: 0;
+    }
     .navbar-brand {
       font-size: 1.2rem;
     }
@@ -495,29 +513,34 @@
     }
   }
   
-  /* Hero Section Styles for Smaller Screens */
-@media (max-width: 768px) {
-    .hero-section {
-      padding: 60px 20px; /* Adjust the padding as needed for smaller screens */
-      text-align: center;
-    }
-    
-    .hero-content h1 {
-      font-size: 36px; /* Adjust the font size for smaller screens */
-    }
-    
-    .hero-content p {
-      font-size: 24px; /* Adjust the font size for smaller screens */
-      margin-bottom: 20px;
-    }
-    
-    .cta-button {
-      font-size: 16px; /* Adjust the font size for smaller screens */
-      padding: 10px 20px; /* Adjust the padding for smaller screens */
-    }
+/* Hero Section Styles for Smaller Screens */
+@media (max-width: 486px) {
+  .hero-section {
+    padding: 60px 20px; /* Adjust the padding as needed for smaller screens */
+    text-align: center;
   }
+  
+  .hero-content h1 {
+    font-size: 36px; /* Adjust the font size for smaller screens */
+  }
+  
+  .hero-content p {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+    padding: 10px 20px; /* Adjust the padding for smaller screens */
+  }
+  
+  .hero-section {
+    background-size: cover;
+  }
+}
 
-  @media (max-width: 992px) {
+
+  @media (max-width: 486px) {
     .services {
         padding: 10px 0;
         background-color: #f9f9f9;
@@ -532,19 +555,19 @@
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 486px) {
     .service-grid {
       grid-template-columns: 1fr; /* Single column on even smaller screens */
     }
   }
   
-  @media (max-width: 992px) {
+  @media (max-width: 486px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 486px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
